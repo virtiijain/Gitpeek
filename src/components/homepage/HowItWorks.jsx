@@ -1,18 +1,56 @@
 export function HowItWorks() {
+  const steps = [
+    {
+      keyword: "1. Search",
+      title: "Enter GitHub Username",
+      description:
+        "Type a valid GitHub username to start discovering insights.",
+    },
+    {
+      keyword: "2. Fetch",
+      title: "Retrieve Data Instantly",
+      description: "Using GitHub’s API, we pull in real-time profile data.",
+    },
+    {
+      keyword: "3. Visualize",
+      title: "Explore Developer Insights",
+      description:
+        "Dive into graphs, repo activity, languages, and stats effortlessly.",
+    },
+  ];
+
   return (
-    <section className="max-w-7xl mx-auto py-15 px-6 text-center">
-      <h2 className="text-2xl lg:text-3xl font-semibold mb-10">How It Works</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {[
-          "Enter a GitHub username",
-          "We fetch the data from GitHub API",
-          "You explore detailed charts & insights",
-        ].map((step, i) => (
-          <div key={i} className="p-6 border rounded-lg shadow-sm">
-            <div className="text-5xl font-bold text-blue-600 mb-4">{i + 1}</div>
-            <p className="text-lg">{step}</p>
-          </div>
-        ))}
+    <section className="py-24 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20">
+        <div>
+          <h2 className="text-2xl lg:text-4xl font-semibold mb-5">
+            How GitPeek Works
+          </h2>
+          <p className="text-sm lg:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+            A simple, efficient 3-step process that helps you get valuable
+            GitHub insights within seconds. No login, no clutter just clean
+            data.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-start border-l-3 border-blue-600 pl-2"
+            >
+              <span className="text-blue-600 font-bold text-sm uppercase tracking-widest mb-1">
+                {step.keyword}
+              </span>
+              <h3 className="text-lg lg:text-xl font-semibold text-gray-800 dark:text-gray-300 mb-1">
+                {step.title}
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                {step.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

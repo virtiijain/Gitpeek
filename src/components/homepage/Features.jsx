@@ -16,7 +16,9 @@ export function Features() {
     },
     {
       title: "Repository Stats",
-      icon: <FolderGit2 className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
+      icon: (
+        <FolderGit2 className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+      ),
       desc: "Analyze stars, forks, most used languages, and top repos.",
     },
     {
@@ -26,12 +28,16 @@ export function Features() {
     },
     {
       title: "GitHub Activity Check",
-      icon: <Activity className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />,
+      icon: (
+        <Activity className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+      ),
       desc: "Find out if the user is active this month or inactive.",
     },
     {
       title: "Contribution Visuals",
-      icon: <CalendarDays className="w-6 h-6 text-orange-500 dark:text-orange-300" />,
+      icon: (
+        <CalendarDays className="w-6 h-6 text-orange-500 dark:text-orange-300" />
+      ),
       desc: "Contribution heatmap to track yearly activity at a glance.",
     },
     {
@@ -43,15 +49,16 @@ export function Features() {
 
   return (
     <section className="py-20 px-6 max-w-7xl mx-auto">
-      {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-2xl lg:text-3xl font-semibold mb-3">What GitPeek Offers</h2>
+        <h2 className="text-2xl lg:text-3xl font-semibold mb-3">
+          What GitPeek Offers
+        </h2>
         <p className="text-gray-600 dark:text-gray-400 max-w-2xl text-center mx-auto mb-10 text-sm sm:text-base">
-          GitPeek delivers smart, clean GitHub profile insights from developer type detection to contribution activity, with zero clutter.
+          GitPeek delivers smart, clean GitHub profile insights from developer
+          type detection to contribution activity, with zero clutter.
         </p>
       </div>
 
-      {/* Feature Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, i) => (
           <div
@@ -60,9 +67,13 @@ export function Features() {
           >
             <div className="flex items-center gap-3 mb-2">
               {feature.icon}
-              <h3 className="text-lg font-semibold">{feature.title}</h3>
+              <h3 className="r=text-base lg:text-lg font-semibold">
+                {feature.title}
+              </h3>
             </div>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">{feature.desc}</p>
+            <p className="text-gray-700 dark:text-gray-300 text-sm">
+              {feature.desc}
+            </p>
           </div>
         ))}
       </div>

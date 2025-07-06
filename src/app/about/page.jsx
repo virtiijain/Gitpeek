@@ -1,15 +1,19 @@
 import { Intro } from "../../components/about/Intro";
-import { Mission } from "../../components/about/Mission";
-import { HowItHelps } from "../../components/about/HowItHelps";
+import { Audience } from "../../components/about/Audience";
 import { BuiltWith } from "../../components/homepage/BuiltWith";
+import { CTA } from "../../components/about/CTA";
+import { Features } from "../../components/about/Features";
+import { HowItWorks } from "../../components/homepage/HowItWorks";
 
 export default function AboutPage() {
   return (
     <>
       <Intro />
-      <Mission />
-      <HowItHelps />
+      <Audience />
+      <HowItWorks />
+      <Features />
       <BuiltWith />
+      <CTA />
     </>
   );
 }

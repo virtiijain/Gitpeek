@@ -19,7 +19,7 @@ export function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <Link
             href="/"
-            className="text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-gray-600 to-blue-50 hover:brightness-110 transition-all duration-300"
+            className="text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:brightness-110 transition-all duration-300"
           >
             GitPeek
             <span className="ml-1 text-sm font-medium text-gray-600 dark:text-gray-400 tracking-wide">
