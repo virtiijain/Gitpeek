@@ -32,7 +32,7 @@ export function BuiltWith() {
       <div className="mt-6">
         <a
           href="https://github.com/virtiijain"
-          className="text-blue-600 hover:underline"
+          className="text-indigo-600 hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >

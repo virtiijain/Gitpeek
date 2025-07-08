@@ -3,16 +3,16 @@ import Link from 'next/link';
 
 export function CTA() {
   return (
-    <div className="sticky bottom-4 z-30 w-full flex justify-center">
-      <div className="bg-indigo-600 text-white rounded-xl shadow-lg px-6 py-4 mx-4 max-w-3xl w-full flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-center sm:text-left font-medium text-base">
-          Start building your GitHub-powered portfolio with <span className="font-semibold">GitPeek</span> today!
+    <div className="sticky bottom-4 z-30 w-full flex justify-center px-4 sm:px-6">
+      <div className="bg-indigo-600 text-white rounded-xl shadow-lg px-6 py-4 max-w-3xl w-full flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-center text-base lg:text-base sm:text-left font-normal">
+          Uncover GitHub profiles in seconds with <span className="font-semibold">GitPeek</span>.
         </p>
         <Link
           href="/"
-          className="bg-white text-indigo-600 font-semibold px-5 py-2 rounded-md hover:bg-gray-100 transition"
+          className="text-indigo-600 text-sm font-normal px-4 py-2 rounded-md bg-gray-100"
         >
-          Get Started
+          Explore Now
         </Link>
       </div>
     </div>

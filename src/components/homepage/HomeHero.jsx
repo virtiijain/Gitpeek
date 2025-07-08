@@ -99,56 +99,44 @@ export function HomeHero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center">
-      <section className="w-full py-20 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-          {/* LEFT SIDE */}
-          <div className="w-full md:w-1/2">
-            <div className="max-w-3xl text-center md:text-left">
-              <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4">
-                Discover GitHub Profiles Effortlessly
-              </h1>
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-2">
-                Search by username to get rich insights on languages,
-                contributions, and developer profile.
-              </p>
-              <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 text-sm uppercase tracking-wide mb-2">
-                Your Developer Insight Tool
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mb-10">
-                Powered by{" "}
-                <span className="font-medium text-gray-900 dark:text-white">
-                  GitHub API
-                </span>
-              </p>
-            </div>
+    <main className="min-h-screen flex flex-col items-center justify-center text-center">
+      <header className="w-full dark:bg-gray-950 py-10">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-sm uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
+            Your Developer Insight Tool
+          </p>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-500 to-blue-900 bg-clip-text text-transparent leading-tight">
+            Discover GitHub Profiles Effortlessly
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6">
+            Search by username to explore insights on languages, contributions,
+            activity, and more.
+          </p>
 
-            <div className="flex flex-col md:flex-row items-center gap-4 w-full max-w-xl mx-auto md:mx-0">
-              <input
-                type="text"
-                placeholder="Enter GitHub username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-black dark:text-white dark:bg-gray-800 transition"
-              />
-              <button
-                onClick={handleSearch}
-                className="w-full md:w-auto px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl transition shadow-md"
-              >
-                {loading ? "Searching..." : "Explore"}
-              </button>
-            </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto mt-10">
+            <input
+              type="text"
+              placeholder="Enter GitHub username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 text-black dark:text-white dark:bg-gray-800 transition"
+            />
+            <button
+              onClick={handleSearch}
+              className="w-full cursor-pointer sm:w-auto px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl transition shadow-md hover:opacity-90"
+            >
+              {loading ? "Searching..." : "Explore"}
+            </button>
           </div>
 
-          {/* RIGHT SIDE (HIDDEN on sm & md screens) */}
-          <div className="hidden lg:flex w-full md:w-1/2 justify-center md:justify-end">
-            <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-2xl animate-pulse-slow">
-              <FaGithub className="text-white text-5xl md:text-7xl" />
-              <div className="absolute -inset-1 rounded-full bg-white dark:bg-gray-900 opacity-10 blur-lg" />
-            </div>
-          </div>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-6">
+            Built using the{" "}
+            <span className="font-medium text-gray-900 dark:text-white">
+              GitHub API
+            </span>
+          </p>
         </div>
-      </section>
+      </header>
 
       {error && <p className="text-red-500 mt-2">{error}</p>}
 
@@ -165,7 +153,7 @@ export function HomeHero() {
                 {userData.name || userData.login}
               </h2>
               <p className="text-gray-700 dark:text-gray-300 mt-1 flex items-center justify-center sm:justify-start gap-2">
-                <FaGithub />@{userData.login} •{" "}
+                <FaGithub />@{userData.login} |{" "}
                 <a
                   href={userData.html_url}
                   target="_blank"
@@ -262,6 +250,6 @@ export function HomeHero() {
           </div>
         </div>
       )}
-    </section>
+    </main>
   );
 }
