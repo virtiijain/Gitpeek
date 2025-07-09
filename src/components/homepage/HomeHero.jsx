@@ -17,13 +17,10 @@ export function HomeHero() {
 
   const handleSearch = async () => {
     if (!username.trim()) return;
-
     setLoading(true);
     setError("");
     setUserData(null);
-
     try {
-      // Fetch user profile
       const profileRes = await fetch(
         `https://api.github.com/users/${username}`,
         {

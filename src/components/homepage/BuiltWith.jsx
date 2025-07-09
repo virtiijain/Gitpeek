@@ -1,13 +1,5 @@
 "use client";
-import { FaReact, FaGithub } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
-
-const stack = [
-  { icon: SiNextdotjs, label: "Next.js" },
-  { icon: FaReact, label: "React" },
-  { icon: SiTailwindcss, label: "Tailwind CSS" },
-  { icon: FaGithub, label: "GitHub API" },
-];
+import { stack } from "../../content/homeContent"
 
 export function BuiltWith() {
   return (

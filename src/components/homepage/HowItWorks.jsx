@@ -1,24 +1,6 @@
-export function HowItWorks() {
-  const steps = [
-    {
-      keyword: "1. Search",
-      title: "Enter GitHub Username",
-      description:
-        "Type a valid GitHub username to start discovering insights.",
-    },
-    {
-      keyword: "2. Fetch",
-      title: "Retrieve Data Instantly",
-      description: "Using GitHub’s API, we pull in real-time profile data.",
-    },
-    {
-      keyword: "3. Visualize",
-      title: "Explore Developer Insights",
-      description:
-        "Dive into graphs, repo activity, languages, and stats effortlessly.",
-    },
-  ];
+import { steps } from "../../content/homeContent";
 
+export function HowItWorks() {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20">

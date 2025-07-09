@@ -1,38 +1,6 @@
-'use client';
-import React from 'react';
-import {
-  BarChart3,
-  FolderGit2,
-  Brain,
-  CalendarDays,
-} from 'lucide-react';
-
-const features = [
-  {
-    title: 'Instant GitHub Insights',
-    description:
-      'Get clean, fast, and focused views of any developer’s GitHub profile.',
-    icon: BarChart3,
-  },
-  {
-    title: 'Top Repos & Languages',
-    description:
-      'See what matters most: starred repos, most-used languages, and code trends at a glance.',
-    icon: FolderGit2,
-  },
-  {
-    title: 'Developer Type Detection',
-    description:
-      'We analyze the tech stack and behavior to guess whether someone is a frontend, backend, or full-stack dev.',
-    icon: Brain,
-  },
-  {
-    title: 'Contribution Activity',
-    description:
-      'Check if someone is active, and explore their yearly commit heatmap visually and clearly.',
-    icon: CalendarDays,
-  },
-];
+"use client";
+import React from "react";
+import { features } from "../../content/aboutContent";
 
 export function Features() {
   return (
@@ -43,8 +11,8 @@ export function Features() {
             Features You’ll Love
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-base lg:text-lg mt-2 max-w-2xl mx-auto">
-            GitPeek helps you explore any GitHub profile with clarity —
-            modern, effortless, and made for insight.
+            GitPeek helps you explore any GitHub profile with clarity — modern,
+            effortless, and made for insight.
           </p>
         </div>
 
