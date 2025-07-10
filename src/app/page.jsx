@@ -1,15 +1,31 @@
-import { HomeHero } from "../components/homepage/HomeHero";
-import { Features } from "../components/homepage/Features";
-import { BuiltWith } from "../components/homepage/BuiltWith";
-import { HowItWorks } from "../components/homepage/HowItWorks";
+import dynamic from "next/dynamic";
+import LazyLoadWrapper from "../common/LazyLoadWrapper";
+
+const HomeHero = dynamic(() => import("../components/homepage/HomeHero"));
+const Features = dynamic(() => import("../components/homepage/Features"));
+const HowItWorks = dynamic(() => import("../components/homepage/HowItWorks"));
+const BuiltWith = dynamic(() => import("../components/homepage/BuiltWith"));
+
+export const metadata = {
+  title: "GitPeek - GitHub Profile Explorer",
+  description: "Explore any GitHub profile effortlessly. Get insights on languages, contributions, activity, and repositories with GitPeek.",
+};
 
 export default function HomePage() {
   return (
     <div className="flex flex-col">
       <HomeHero />
-      <Features />
-      <HowItWorks />
-      <BuiltWith />
+      <LazyLoadWrapper>
+        <Features />
+      </LazyLoadWrapper>
+
+      <LazyLoadWrapper>
+        <HowItWorks />
+      </LazyLoadWrapper>
+
+      <LazyLoadWrapper>
+        <BuiltWith />
+      </LazyLoadWrapper>
     </div>
   );
 }

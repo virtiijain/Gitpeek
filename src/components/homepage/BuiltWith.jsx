@@ -1,7 +1,7 @@
 "use client";
 import { stack } from "../../content/homeContent"
 
-export function BuiltWith() {
+export default function BuiltWith() {
   return (
     <section className="max-w-7xl mx-auto py-15 px-6 text-center">
       <h2 className="text-2xl lg:text-3xl font-semibold mb-3">Built With</h2>

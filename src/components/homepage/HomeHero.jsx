@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import {
   FaMapMarkerAlt,
   FaBook,
@@ -9,7 +10,7 @@ import {
 import { GoRepo } from "react-icons/go";
 import { MdAccessTime, MdOutlineStar } from "react-icons/md";
 
-export function HomeHero() {
+export default function HomeHero() {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState("");
@@ -120,6 +121,7 @@ export function HomeHero() {
             />
             <button
               onClick={handleSearch}
+              aria-label="Explore GitHub user"
               className="w-full cursor-pointer sm:w-auto px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl transition shadow-md hover:opacity-90"
             >
               {loading ? "Searching..." : "Explore"}
@@ -140,9 +142,12 @@ export function HomeHero() {
       {userData && (
         <div className="mx-auto max-w-7xl px-6 text-black dark:text-white">
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <img
+            <Image
               src={userData.avatar_url}
               alt={userData.login}
+              width={112}
+              height={112}
+              loading="lazy"
               className="w-28 h-28 rounded-full shadow-lg transition hover:scale-105 duration-300"
             />
             <div className="text-center sm:text-left">
@@ -242,7 +247,10 @@ export function HomeHero() {
             <img
               src={`https://ghchart.rshah.org/${userData.login}`}
               alt="GitHub contribution chart"
+              width={900}
+              height={120}
               className="w-full max-w-3xl p-2 rounded-md border border-gray-300 dark:border-gray-700"
+              loading="lazy"
             />
           </div>
         </div>

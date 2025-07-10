@@ -1,6 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 
-export function Intro() {
+export default function Intro() {
   return (
     <section className="relative min-h-screen w-full px-4 sm:px-6 lg:px-8 py-24">
       <div className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 items-center h-full">

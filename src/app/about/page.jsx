@@ -1,18 +1,42 @@
-import { Intro } from "../../components/about/Intro";
-import { Audience } from "../../components/about/Audience";
-import { BuiltWith } from "../../components/homepage/BuiltWith";
-import { CTA } from "../../components/about/CTA";
-import { Features } from "../../components/about/Features";
-import { HowItWorks } from "../../components/homepage/HowItWorks";
+import dynamic from "next/dynamic";
+import LazyLoadWrapper from "../../common/LazyLoadWrapper";
+
+const Intro = dynamic(() => import("../../components/about/Intro"));
+const Audience = dynamic(() => import("../../components/about/Audience"));
+const HowItWorks = dynamic(() =>
+  import("../../components/homepage/HowItWorks")
+);
+const Features = dynamic(() => import("../../components/about/Features"));
+const BuiltWith = dynamic(() => import("../../components/homepage/BuiltWith"));
+const CTA = dynamic(() => import("../../components/about/CTA"));
+
+export const metadata = {
+  title: "About | GitPeek",
+  description:
+    "Discover how GitPeek analyzes GitHub profiles to provide developer insights, activity stats, and language trends.",
+};
+
 
 export default function AboutPage() {
   return (
     <>
       <Intro />
-      <Audience />
-      <HowItWorks />
-      <Features />
-      <BuiltWith />
+      <LazyLoadWrapper>
+        <Audience />
+      </LazyLoadWrapper>
+
+      <LazyLoadWrapper>
+        <HowItWorks />
+      </LazyLoadWrapper>
+
+      <LazyLoadWrapper>
+        <Features />
+      </LazyLoadWrapper>
+
+      <LazyLoadWrapper>
+        <BuiltWith />
+      </LazyLoadWrapper>
+
       <CTA />
     </>
   );

@@ -2,9 +2,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-body {
-  font-family: "Nunito", sans-serif;
-}
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

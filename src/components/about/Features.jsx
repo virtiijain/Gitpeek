@@ -2,7 +2,7 @@
 import React from "react";
 import { features } from "../../content/aboutContent";
 
-export function Features() {
+export default function Features() {
   return (
     <section className="w-full py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
