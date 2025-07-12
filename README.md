@@ -9,5 +9,9 @@ GitPeek is a minimal and responsive web app that lets you explore GitHub user pr
 - **API:** GitHub REST API
 
 ---
+## preview 
+
+- **main route review**
+![App Preview](./src/public/preview.png)
 
 >> Focus on clarity, not just code. Great developers write for humans first 
